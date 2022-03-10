@@ -1,4 +1,4 @@
-import json
+from database import *
 
 def extract_route(s):
     split = s.split()
@@ -10,19 +10,9 @@ def read_file(path):
         content = file.read()
     return content
 
-def addtojson(dict):
-    with open('data/notes.json', 'r', encoding='UTF-8') as jsonFile:
-        jsonObject = json.load(jsonFile)
-    
-    jsonObject.append(dict)
-
-    with open('data/notes.json', 'w', encoding='UTF-8') as jsonFile:
-        json.dump(jsonObject, jsonFile)
-
-def load_data(file_name):
-    with open("data/"+file_name, 'r', encoding='UTF-8') as json_file:
-        file_content = json.load(json_file)
-    return file_content
+def load_data(Database):
+    data = Database.get_all()
+    return data
 
 def load_template(file_name):
     with open("templates/"+file_name, 'r', encoding='utf-8') as file:

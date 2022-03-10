@@ -1,7 +1,8 @@
 import socket
 from pathlib import Path
 from utils import extract_route, read_file, build_response
-from views import index
+from views import *
+from database import *
 
 CUR_DIR = Path(__file__).parent
 SERVER_HOST = '0.0.0.0'
@@ -20,13 +21,17 @@ while True:
     request = client_connection.recv(16384).decode()
     print(request)
 
+    data = Database("banco")
+
     route = extract_route(request)
 
     filepath = CUR_DIR / route
     if filepath.is_file():
         response = build_response() + read_file(filepath)
     elif route == '':
-        response = index(request)
+        response = index(request, data)
+    elif route == 'delete':
+        response = delete(request, data)
     else:
         response = build_response() + bytes()
 

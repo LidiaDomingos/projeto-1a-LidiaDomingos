@@ -1,4 +1,19 @@
-<h3 class="card-title"> {title}</h3>
-  <div class="card-content">
-    <p>{details}</p>
+<div class = 'ajustando_deletar'>
+  <div class="card">
+    <h3 class="card-title"> 
+      {title}
+    </h3>
+    <div class="card-content">
+      <p>
+        {details}
+      </p>
+    </div>
   </div>
+
+  <form class = "botao_deletar" method="post" action = "delete">
+    <input type = "hidden" name = "id" value={id}>
+    <button class="btn" type="submit">
+      Deletar
+    </button>
+  </form>
+</div>

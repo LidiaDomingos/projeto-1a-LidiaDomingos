@@ -215,3 +215,11 @@ p {
 
   transition: width 0.2s ease-out, padding-top 0.2s ease-out;
 }
+.botao_deletar{
+  display: flex;
+  justify-content: center;
+}
+.ajustando_deletar {
+  display: flex;
+  flex-direction: column;
+}
