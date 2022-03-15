@@ -1,1 +1,6 @@
-## Projeto 1
+# Projeto 1 - Parte A - Tecnologias Web - 2022.1
+- Lídia Alves Chagas Domingos
+
+Esse projeto tem como objetivo criar um servidor ligado á uma base de dados. Na página ideal pedida no projeto, é possível adicionar, ler os dados, deletar e editar as notas no banco de dados utilizando SQLite. Isso tem o objetivo de produzir o conjunto de operações CRUD (Create, Read, Update, Delete). Em geral, as linguagens usadas foram HTML, CSS e Javascript, com o banco de dados SQLite. Nesse projeto, foi implementado as seguintes tarefas propostas: estilo da página, apagar uma anotação e implementar a persistência de dados com SQL. Não foi possível fazer a tarefa de editar por falta de tempo, mas fica como uma implementação a ser feita mais tarde.
+
+Inicialmente, foi utilizado os arquivos do handout 1 sobre servidor, e junto com os arquivos da aula 2, foi atualizado o handout 1 para que parasse de utilizar um arquivo json como "repositório de dados" e passasse a ser usado um banco de dados propriamente dito, de forma que não tivesse risco do arquivo json ficar muito pesado ou caso ocorra algum tipo de corrompimento, não se perder tudo. Logo em seguida, foi ajeitado o HTML e CSS para que a pagina ficasse estilizada como deveria. Além disso, no handout 1, foi criada uma nova função "delete" para fazer o recarregamento da página junto a remoção da nota.
