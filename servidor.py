@@ -33,8 +33,8 @@ while True:
     elif route == 'delete':
         response = delete(request, data)
     else:
-        response = build_response() + bytes()
-
+        # response = build_response() + bytes()
+        response = erro(request)
     client_connection.sendall(response)
 
     client_connection.close()

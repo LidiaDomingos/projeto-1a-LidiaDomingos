@@ -69,3 +69,6 @@ def delete(request, Database):
         return build_response(body=body, code=303, reason='See Other', headers='Location: /')
     else:
         return build_response(body=body)
+
+def erro(request):
+    return build_response(body=load_template('erro.html'))
