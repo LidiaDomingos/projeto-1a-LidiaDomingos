@@ -1,0 +1,18 @@
+{% extends "notes/base.html" %}
+
+{% block content %}
+
+
+<form method="post">
+    {% csrf_token %}
+    <label for="detalhes">
+        Memória
+    </label>
+    <textarea id="detalhes" name="detalhes"></textarea>
+    <input type="submit" />
+</form>
+
+<ul>
+    <li>{{ notes.content }}</li>
+</ul>
+{% endblock %}
